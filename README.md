@@ -54,10 +54,12 @@ Node.js is a powerful, open-source JavaScript runtime built on Chrome's V8 engin
    ```bash
    sudo apt update
    ```
+![Image](https://github.com/user-attachments/assets/32301701-a2cc-4131-a0d3-4c77f7259501)
 2. Install curl if not already installed. Curl is a command-line tool used to transfer data to or from a server using various protocols like HTTP, HTTPS, FTP, etc. Run:
    ```bash
    sudo apt install curl
    ```
+![Image](https://github.com/user-attachments/assets/1a3ef383-832a-4c74-8e47-525fd1ec6db5)
 3. Use the following command to fetch and set up the NodeSource repository. NodeSource repository is a trusted external package repository that allows you to install and update Node.js on your system more easily and ensures you get the latest stable versions of Node.js:
    ```bash
    curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash –
@@ -70,6 +72,7 @@ Node.js is a powerful, open-source JavaScript runtime built on Chrome's V8 engin
    ```bash
    node -v
    ```
+![Image](https://github.com/user-attachments/assets/c4ae2c5c-fd61-43c0-a8a6-160fb2a49dc2)
 
 ### Step 3: Install MongoDB
 MongoDB is a NoSQL database that stores data in flexible, JSON-like documents, allowing for dynamic schemas and scalable, high-performance data storage and retrieval.
@@ -79,6 +82,8 @@ For our example application, we are adding book records to MongoDB that contain 
 1. Add the MongoDB repository:
    ```bash
    sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
+![Image](https://github.com/user-attachments/assets/7e6df88f-4955-4d4a-8143-99dafb43d0b0)
+
    echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.4 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.4.list
    ```
 2. Install MongoDB:
@@ -91,10 +96,12 @@ For our example application, we are adding book records to MongoDB that contain 
    sudo systemctl enable mongod
    sudo systemctl status mongod
    ```
+   ![Image](https://github.com/user-attachments/assets/853a1569-6fb7-49bc-ab06-ddde72294fd6)
 4. We need ‘body-parser’ package to help us process JSON files passed in requests to the server:
    ```bash
    sudo npm install body-parser
    ```
+![Image](https://github.com/user-attachments/assets/eea4ecee-0f6e-4a5d-b5a0-b408c4950423)
 5. Create a folder named ‘Books’ and change directory into the Books folder:
    ```bash
    mkdir Books
@@ -250,6 +257,7 @@ Express.js is a back-end web application framework for Node.js that simplifies b
      };
    });
    ```
+![Image](https://github.com/user-attachments/assets/15bbc09f-360b-49c6-ab0b-ba3f726a85fc)
 3. In public folder, create a file named index.html and paste the below code:
    ```html
    <!doctype html>
@@ -305,6 +313,9 @@ Express.js is a back-end web application framework for Node.js that simplifies b
    ```bash
    node server.js
    ```
+![Image](https://github.com/user-attachments/assets/e2ebacbe-3d26-4225-8dd2-d505bc6ccd24)
+
+![Image](https://github.com/user-attachments/assets/fd157e90-6d92-487b-a757-555de0b51d2d)
 
 ### Conclusion
 The project demonstrates a full-stack web application where users can perform CRUD operations on books. Deploying the MEAN stack on AWS offers scalability, availability, and easy access to resources for real-world applications.
